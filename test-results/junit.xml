@@ -1,0 +1,8 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="2.814508">
+<testsuite name="single-browser.spec.ts" timestamp="2025-12-03T03:41:06.531Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.909" errors="0">
+<testcase name="single-browser navigation › navigate to google" classname="single-browser.spec.ts" time="0.557">
+</testcase>
+<testcase name="single-browser navigation › navigate to gmail" classname="single-browser.spec.ts" time="1.352">
+</testcase>
+</testsuite>
+</testsuites>

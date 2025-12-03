@@ -11,7 +11,8 @@ export default defineConfig({
   expect: { timeout: 5_000 },
   reporter: [
     ['html', { open: 'never' }],
-     ['list']
+    ['junit', { outputFile: 'test-results/junit.xml' }],
+    ['list']
   ],
   use: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
