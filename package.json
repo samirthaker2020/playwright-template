@@ -1,0 +1,49 @@
+{
+  "name": "ess-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:dev": "set BASE_URL=https://dev.example.com&& npx playwright test",
+    "test:staging": "set BASE_URL=https://staging.example.com&& npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "codegen": "npx playwright codegen",
+    "install-browsers": "npx playwright install --with-deps",
+    "prepare": "husky install .husky",
+    "test:ci": "npx playwright test --reporter=dot",
+    "lint": "npx eslint \"src/**/*.{ts,tsx,js,jsx}\"",
+    "lint:fix": "npx eslint \"src/**/*.{ts,tsx,js,jsx}\" --fix",
+    "format": "npx prettier --write 'src/**/*.{ts,tsx,js,json,md}'",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "gagandeep",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.48.1",
+    "@typescript-eslint/parser": "^8.48.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "husky": "^8.0.0",
+    "jiti": "^2.6.1",
+    "lint-staged": "^14.0.0",
+    "playwright": "^1.57.0",
+    "prettier": "^3.7.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "npx eslint --fix",
+      "npx prettier --write"
+    ]
+  }
+}
