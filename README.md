@@ -47,13 +47,6 @@ npx playwright show-report
 - `playwright.config.ts` reads `BASE_URL` from env; set `BASE_URL` in CI or `.env` for local runs.
 - Reports are written to `playwright-report/`. Test artifacts (screenshots, videos, traces) and JUnit XML are placed in `test-results/`.
 
-## Husky (pre-commit)
-
-This repository uses `husky` + `lint-staged` to run linters and formatters on staged files before committing.
-
-- Hooks are installed automatically after `npm install` / `npm ci` thanks to the `prepare` script in `package.json`.
-- The pre-commit hook runs `lint-staged`, which executes `eslint --fix` and `prettier --write` on staged `src/**/*.{ts,tsx,js,jsx}` files.
-
 Commands:
 
 ```powershell
